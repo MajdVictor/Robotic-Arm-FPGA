@@ -1,0 +1,438 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon May  9 00:45:30 2022
+# Process ID: 162002
+# Current directory: /home/mvh/Desktop/fpga/servo/servo.runs/synth_1
+# Command line: vivado -log project_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source project_3.tcl
+# Log file: /home/mvh/Desktop/fpga/servo/servo.runs/synth_1/project_3.vds
+# Journal file: /home/mvh/Desktop/fpga/servo/servo.runs/synth_1/vivado.jou
+# Running On: mvh-VirtualBox, OS: Linux, CPU Frequency: 2494.226 MHz, CPU Physical cores: 1, Host memory: 7366 MB
+#-----------------------------------------------------------
+source project_3.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2599.996 ; gain = 5.961 ; free physical = 1784 ; free virtual = 5015
+Command: read_checkpoint -auto_incremental -incremental /home/mvh/Desktop/fpga/servo/servo.srcs/utils_1/imports/synth_1/project_3.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/mvh/Desktop/fpga/servo/servo.srcs/utils_1/imports/synth_1/project_3.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top project_3 -part xc7s50csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 162040
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 2600.066 ; gain = 0.000 ; free physical = 812 ; free virtual = 4043
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'project_3' [/home/mvh/Desktop/fpga/servo/servo.srcs/sources_1/new/project_3.v:41]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/mvh/Desktop/fpga/servo/servo.srcs/sources_1/new/project_3.v:148]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/mvh/Desktop/fpga/servo/servo.srcs/sources_1/new/project_3.v:158]
+INFO: [Synth 8-6155] done synthesizing module 'project_3' (1#1) [/home/mvh/Desktop/fpga/servo/servo.srcs/sources_1/new/project_3.v:41]
+WARNING: [Synth 8-7129] Port sw[15] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[14] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[13] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[12] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[11] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[10] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[9] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[8] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[7] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[6] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[5] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[4] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[3] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[2] in module project_3 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 2600.066 ; gain = 0.000 ; free physical = 240 ; free virtual = 3442
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 2600.066 ; gain = 0.000 ; free physical = 232 ; free virtual = 3434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 2600.066 ; gain = 0.000 ; free physical = 232 ; free virtual = 3434
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2600.066 ; gain = 0.000 ; free physical = 227 ; free virtual = 3428
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/mvh/Desktop/fpga/constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [/home/mvh/Desktop/fpga/constraints.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [/home/mvh/Desktop/fpga/constraints.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [/home/mvh/Desktop/fpga/constraints.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [/home/mvh/Desktop/fpga/constraints.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [/home/mvh/Desktop/fpga/constraints.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [/home/mvh/Desktop/fpga/constraints.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [/home/mvh/Desktop/fpga/constraints.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [/home/mvh/Desktop/fpga/constraints.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [/home/mvh/Desktop/fpga/constraints.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [/home/mvh/Desktop/fpga/constraints.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [/home/mvh/Desktop/fpga/constraints.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [/home/mvh/Desktop/fpga/constraints.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [/home/mvh/Desktop/fpga/constraints.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [/home/mvh/Desktop/fpga/constraints.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [/home/mvh/Desktop/fpga/constraints.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [/home/mvh/Desktop/fpga/constraints.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB0[0]'. [/home/mvh/Desktop/fpga/constraints.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB0[1]'. [/home/mvh/Desktop/fpga/constraints.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB0[2]'. [/home/mvh/Desktop/fpga/constraints.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1[0]'. [/home/mvh/Desktop/fpga/constraints.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1[1]'. [/home/mvh/Desktop/fpga/constraints.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1[2]'. [/home/mvh/Desktop/fpga/constraints.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_AN[0]'. [/home/mvh/Desktop/fpga/constraints.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_AN[1]'. [/home/mvh/Desktop/fpga/constraints.xdc:121]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:121]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_AN[2]'. [/home/mvh/Desktop/fpga/constraints.xdc:123]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:123]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_AN[3]'. [/home/mvh/Desktop/fpga/constraints.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[0]'. [/home/mvh/Desktop/fpga/constraints.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:127]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[1]'. [/home/mvh/Desktop/fpga/constraints.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:129]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[2]'. [/home/mvh/Desktop/fpga/constraints.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:131]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[3]'. [/home/mvh/Desktop/fpga/constraints.xdc:133]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:133]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[4]'. [/home/mvh/Desktop/fpga/constraints.xdc:135]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:135]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[5]'. [/home/mvh/Desktop/fpga/constraints.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[6]'. [/home/mvh/Desktop/fpga/constraints.xdc:139]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:139]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D0_SEG[7]'. [/home/mvh/Desktop/fpga/constraints.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:141]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_AN[0]'. [/home/mvh/Desktop/fpga/constraints.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_AN[1]'. [/home/mvh/Desktop/fpga/constraints.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_AN[2]'. [/home/mvh/Desktop/fpga/constraints.xdc:151]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:151]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_AN[3]'. [/home/mvh/Desktop/fpga/constraints.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_SEG[0]'. [/home/mvh/Desktop/fpga/constraints.xdc:155]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:155]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_SEG[1]'. [/home/mvh/Desktop/fpga/constraints.xdc:157]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:157]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_SEG[2]'. [/home/mvh/Desktop/fpga/constraints.xdc:159]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:159]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_SEG[3]'. [/home/mvh/Desktop/fpga/constraints.xdc:161]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:161]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_SEG[4]'. [/home/mvh/Desktop/fpga/constraints.xdc:163]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:163]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_SEG[5]'. [/home/mvh/Desktop/fpga/constraints.xdc:165]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:165]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_SEG[6]'. [/home/mvh/Desktop/fpga/constraints.xdc:167]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:167]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'D1_SEG[7]'. [/home/mvh/Desktop/fpga/constraints.xdc:169]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:169]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'UART_rxd'. [/home/mvh/Desktop/fpga/constraints.xdc:175]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:175]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'UART_txd'. [/home/mvh/Desktop/fpga/constraints.xdc:177]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:177]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hdmi_clk_n'. [/home/mvh/Desktop/fpga/constraints.xdc:183]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:183]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hdmi_clk_p'. [/home/mvh/Desktop/fpga/constraints.xdc:185]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:185]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_n[0]'. [/home/mvh/Desktop/fpga/constraints.xdc:189]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:189]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_n[1]'. [/home/mvh/Desktop/fpga/constraints.xdc:191]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:191]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_n[2]'. [/home/mvh/Desktop/fpga/constraints.xdc:193]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:193]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_p[0]'. [/home/mvh/Desktop/fpga/constraints.xdc:197]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:197]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_p[1]'. [/home/mvh/Desktop/fpga/constraints.xdc:199]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:199]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hdmi_tx_p[2]'. [/home/mvh/Desktop/fpga/constraints.xdc:201]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:201]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'left_audio_out'. [/home/mvh/Desktop/fpga/constraints.xdc:207]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:207]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'right_audio_out'. [/home/mvh/Desktop/fpga/constraints.xdc:209]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mvh/Desktop/fpga/constraints.xdc:209]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/mvh/Desktop/fpga/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/mvh/Desktop/fpga/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/project_3_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/project_3_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2608.000 ; gain = 0.000 ; free physical = 1083 ; free virtual = 4285
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2608.000 ; gain = 0.000 ; free physical = 1083 ; free virtual = 4285
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 2608.000 ; gain = 7.934 ; free physical = 1145 ; free virtual = 4347
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 2608.000 ; gain = 7.934 ; free physical = 1145 ; free virtual = 4347
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 2608.000 ; gain = 7.934 ; free physical = 1145 ; free virtual = 4347
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 2608.000 ; gain = 7.934 ; free physical = 1139 ; free virtual = 4342
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   27 Bit       Adders := 1     
+	   2 Input   21 Bit       Adders := 3     
++---Registers : 
+	               27 Bit    Registers := 1     
+	               21 Bit    Registers := 3     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input   27 Bit        Muxes := 1     
+	   2 Input   21 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 4     
+	   5 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port sw[15] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[14] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[13] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[12] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[11] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[10] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[9] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[8] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[7] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[6] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[5] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[4] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[3] in module project_3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[2] in module project_3 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 2608.000 ; gain = 7.934 ; free physical = 1124 ; free virtual = 4330
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 2608.000 ; gain = 7.934 ; free physical = 1005 ; free virtual = 4212
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 2608.000 ; gain = 7.934 ; free physical = 1005 ; free virtual = 4212
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 2608.000 ; gain = 7.934 ; free physical = 1002 ; free virtual = 4209
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 2608.000 ; gain = 7.934 ; free physical = 1002 ; free virtual = 4209
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 2608.000 ; gain = 7.934 ; free physical = 1002 ; free virtual = 4209
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 2608.000 ; gain = 7.934 ; free physical = 1002 ; free virtual = 4209
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 2608.000 ; gain = 7.934 ; free physical = 1002 ; free virtual = 4209
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 2608.000 ; gain = 7.934 ; free physical = 1002 ; free virtual = 4209
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 2608.000 ; gain = 7.934 ; free physical = 1002 ; free virtual = 4209
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    52|
+|3     |LUT1   |    34|
+|4     |LUT2   |    68|
+|5     |LUT3   |     5|
+|6     |LUT4   |     5|
+|7     |LUT5   |     3|
+|8     |LUT6   |    39|
+|9     |FDRE   |   184|
+|10    |FDSE   |     4|
+|11    |IBUF   |     7|
+|12    |OBUF   |     4|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 2608.000 ; gain = 7.934 ; free physical = 1002 ; free virtual = 4209
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:36 . Memory (MB): peak = 2608.000 ; gain = 0.000 ; free physical = 1055 ; free virtual = 4261
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 2608.008 ; gain = 7.934 ; free physical = 1055 ; free virtual = 4262
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2608.008 ; gain = 0.000 ; free physical = 1137 ; free virtual = 4343
+INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 7 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2608.008 ; gain = 0.000 ; free physical = 1084 ; free virtual = 4291
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 72861e37
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 89 Warnings, 58 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:44 . Memory (MB): peak = 2608.008 ; gain = 8.012 ; free physical = 1284 ; free virtual = 4491
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/home/mvh/Desktop/fpga/servo/servo.runs/synth_1/project_3.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file project_3_utilization_synth.rpt -pb project_3_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon May  9 00:46:37 2022...

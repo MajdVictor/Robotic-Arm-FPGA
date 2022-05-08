@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon May  9 00:48:36 2022
+# Process ID: 162481
+# Current directory: /home/mvh/Desktop/fpga/servo/servo.runs/impl_1
+# Command line: vivado -log project_3.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source project_3.tcl -notrace
+# Log file: /home/mvh/Desktop/fpga/servo/servo.runs/impl_1/project_3.vdi
+# Journal file: /home/mvh/Desktop/fpga/servo/servo.runs/impl_1/vivado.jou
+# Running On: mvh-VirtualBox, OS: Linux, CPU Frequency: 2494.226 MHz, CPU Physical cores: 1, Host memory: 7366 MB
+#-----------------------------------------------------------
+source project_3.tcl -notrace
