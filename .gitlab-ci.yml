@@ -1,3 +1,3 @@
 artifacts:
     paths:
-    - build/
+    - /builds/$CI_PROJECT_PATH/build
