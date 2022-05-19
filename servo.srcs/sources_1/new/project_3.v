@@ -35,6 +35,7 @@
 //enable switch
 //reset button
 //counter module for all
+//use system verilog sv extension. use logic instead of reg and wire
 
 //Idea of keeping 4 pulses ( every servo has a pulse)  to keep them not easily rotate by hands( 
 //Idea display which servo is selected using the switches [3:0]  
