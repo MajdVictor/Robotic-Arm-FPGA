@@ -1,5 +1,12 @@
+# Robotic Arm on FPGA
 
-add first page
+**University: _Deggendorf Institute of Technology_**
+
+**Course: _FPGA programming_**
+
+**Done by: _Majd Hafiri_**
+
+**Term: _SS2022_**
 
 
 
@@ -13,7 +20,7 @@ In this project, I designed and Implemented a FPGA solution to control a wooden 
 
 The idea of this project came to mind when I designed a Robotic vehicle as a graduation project back in 2016. The main goal of that project was to reduce the risk when Humans discover ancient places such as caves by replacing humans with a robotic vehicle to do the job. Recently , I had the chance to continue shaping this idea and implement the Arm module which was intended to be attached to that robot. ( see the following screenshots for the Robot and the GUI )
 
-![image](https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/blob/main/report_images/old_project.jpg)
+![image of old project](https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/raw/main/report_images/old_project.jpg)
 
 Taking the FPGA course at THD by Prof. ​​Gökçe Aydos and completing the exercises for the boolean board on Realdigital, helped me designing the circuit for my project. Additionally I was inspired by a nice project idea of a robotic Arm done by [Muhammad Ansar](https://youtu.be/VtcNamFA8hw). The idea of this project is to control a Robotic Arm with a hand gesture using Arduino, Bluetooth module and Accelerometer sensor. Moreover, I received some tips from my professor such as generating the pulse width modulation to drive the servo motors and learned as well from a project by [Kaitlyn Franz](https://www.instructables.com/Controlling-Servos-on-FPGA/) on controlling servos using FPGAs.
 
@@ -25,9 +32,9 @@ The Robotic Arm project consists of 2 major hardware components which are:
 
  - Wooden arm with 4 servo motors which I bought for almost 20 Euros on Amazon.
 
-The following image illustrates how the arm is connected to the board as well as the inputs and  the outputs used.
+The following image illustrates how the arm is connected to the board as well as the inputs and the outputs used.
 
-IMAGE HERE
+![block diagram image](https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/raw/main/report_images/hardware_connections.jpg)
 
 Image credits: [realdigital](https://www.realdigital.org/hardware/boolean), [Amazon](https://www.amazon.de/Mechanical-Science-Experiment-Raspberry-SNAM1500/dp/B08CKC3KZ6/ref=sr_1_27_sspa?crid=2HL9LRXQ69QLK&keywords=roboterarm+holz&qid=1656112841&sprefix=robotic+arm+wooden%2Caps%2C212&sr=8-27-spons&psc=1&smid=A249EEO40WNRMY&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFGVFNIVTU3ODFDSzMmZW5jcnlwdGVkSWQ9QTA2NDk5MTEyTjNUTTYyOVM5VTBFJmVuY3J5cHRlZEFkSWQ9QTAwNzUyNzEyMUhGMUFZSDFONVZGJndpZGdldE5hbWU9c3BfbXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==)
  
@@ -38,7 +45,7 @@ The 4 micro servo motors operate with ~5 Volts where each servo motor has 3 wire
 
 
 
-### Functionalities:
+### Functionalities
 
 The circuit operates in two different modes:
 
@@ -60,16 +67,16 @@ For the software part, I used the SystemVerilog and Vivado tool to describe my c
 
 My Robotic Arm circuit consists of different building blocks connected together to achieve the desired functionalities. The block diagram below, illustrates the communications between these parts:
 
-![block diagram](https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/blob/main/report_images/block_diagram.jpg)
+![block diagram image](https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/raw/main/report_images/block_diagram.jpg)
 
  * Almost each part of the project is implemented in a separate module. The main module ( robotic_arm ) is the heart of the circuit which connects them together as well as connecting the inputs and outputs.
 
 
-# Implementation
+## Implementation
 
 ### How Servo motors work? 
 
-![servo pulses](https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/blob/main/report_images/servo-position-pulses.jpeg)
+![servo pulses](https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/raw/main/report_images/servo-position-pulses.jpeg)
 
 Image credit: [aishack](https://aishack.in/tutorials/servo-motors/)
 
@@ -81,7 +88,7 @@ As shown in the previous image, The inputs used on the FPGA board are two push b
 Regarding the Automated process, The last switch sw15 (`automatedProcessSwitch`) is used as an enable signal.
 
 
-### Module explanations:
+### Module explanations
 
 The `robotic_arm` module instantiates and connects inputs and outputs with other modules where each module is instantiated once except for `pwm_generator` which is instantiated four times to generate 4 pulse signals for the servo motors.
 
@@ -108,7 +115,7 @@ The servo control module consists of two main parts : one for the manual process
 
 
 
-### Simulation:
+### Simulation
 The modules were tested separately where each one of them has its own testbench. The following waveform screenshots for servo_control and seven_segment_display modules show the correctness of the circuit functionalities. And regarding other modules, it is preferable to simulate them locally since the range of the inputs is high.
 
 [Servo Control waveform](https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/blob/main/simulation%20screenshots/servo_control.png)
@@ -125,7 +132,7 @@ https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/blob/main/Robotic_arm_demo
 
 
 
-## Issues & Solutions
+# Issues & Solutions
 
 In this project, I encountered several unexpected issues and they are as follow: 
 
@@ -153,7 +160,7 @@ In this project, I encountered several unexpected issues and they are as follow:
 
 
 
-## Improvements:
+# Improvements:
 
 There are some improvements and features that can be added to my project in the future. Some suggestions could be: 
 
@@ -169,11 +176,13 @@ There are some improvements and features that can be added to my project in the 
 
 
 
-
-
-
-## Conclusion:
+# Conclusion:
 
 I have noticed how FPGAs are good solutions for robotics even though I didn't use all the features of the board since it provides a number of I/O resources which can be reprogrammed easily. In addition to that, it has low Latency time compared to other solutions which makes it faster for the signal to be sent to the output.
 
 By doing the Robotic arm on the FPGA, I have learned a lot about circuit design as well as servo motors and Pulse Width Modulation. Even though I dealt with these modules before, this time was challenging to me because I implemented the PWM from scratch using counters and modified the pulse width based on user input (push buttons) to change the servo Angles. Moreover, I learned a lot about circuit simulation and how to analyze the waveform. 
+
+
+# Source code
+
+The source code can be found in my [repository](https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga)
