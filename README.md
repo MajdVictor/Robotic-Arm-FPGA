@@ -10,13 +10,13 @@
 
 
 
-## Introduction
+# Introduction
 
 A Robotic arm is a mechanical arm consisting of a shoulder, elbow and a wrist which resembles the human arm. Nowadays, these kinds of arms are used in multiple industries such as welding, labeling and much more. The structure of the Robotic Arm differs from one type to another based on their functionalities.
 
 In this project, I designed and Implemented a FPGA solution to control a wooden Robotic Arm which consists of four servo motors using push buttons and slide switches. This Arm can be controlled in Automated and manual ways. Using FPGAs in such a project is a good solution specifically dealing with parallel operations which work at multiple clock speeds.
 
-## Literature research
+# Literature research
 
 The idea of this project came to mind when I designed a Robotic vehicle as a graduation project back in 2016. The main goal of that project was to reduce the risk when Humans discover ancient places such as caves by replacing humans with a robotic vehicle to do the job. Recently , I had the chance to continue shaping this idea and implement the Arm module which was intended to be attached to that robot. ( see the following screenshots for the Robot and the GUI )
 
@@ -25,7 +25,7 @@ The idea of this project came to mind when I designed a Robotic vehicle as a gra
 Taking the FPGA course at THD by Prof. ​​Gökçe Aydos and completing the exercises for the boolean board on Realdigital, helped me designing the circuit for my project. Additionally I was inspired by a nice project idea of a robotic Arm done by [Muhammad Ansar](https://youtu.be/VtcNamFA8hw). The idea of this project is to control a Robotic Arm with a hand gesture using Arduino, Bluetooth module and Accelerometer sensor. Moreover, I received some tips from my professor such as generating the pulse width modulation to drive the servo motors and learned as well from a project by [Kaitlyn Franz](https://www.instructables.com/Controlling-Servos-on-FPGA/) on controlling servos using FPGAs.
 
 
-## Specifications
+# Specifications
 The Robotic Arm project consists of 2 major hardware components which are:
 
  - FPGA board: Xilinx Spartan-7 XC7S50-CSGA324 , and it was provided by Deggendorf Institute of Technology which costs around 69 dollars on Realdigital website.
@@ -49,16 +49,16 @@ The 4 micro servo motors operate with ~5 Volts where each servo motor has 3 wire
 
 The circuit operates in two different modes:
 
-1- Manual mode
+1. **Manual mode**
 
- - The user can select one of the servo motors to control using a slide switch.
- - The selected servo motor can be controlled (change direction) using two push buttons.
- - A 7 segment display to show the number of the selected servo motor
+   - The user can select one of the servo motors to control using a slide switch.
+   - The selected servo motor can be controlled (change direction) using two push buttons.
+   - A 7 segment display to show the number of the selected servo motor.
 
 
-2- Automatic mode
- - The robotic arm can be run automatically using a slide switch which allows it to operate in a repetitive movement.
- - Another seven segment display is used to show a letter A ( automated )
+2. **Automatic mode**
+   - The robotic arm can be run automatically using a slide switch which allows it to operate in a repetitive movement.
+   - Another seven segment display is used to show a letter A ( automated ).
 
 
 ### Software components
@@ -69,10 +69,10 @@ My Robotic Arm circuit consists of different building blocks connected together 
 
 ![block diagram image](https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/raw/main/report_images/block_diagram.jpg)
 
- * Almost each part of the project is implemented in a separate module. The main module ( robotic_arm ) is the heart of the circuit which connects them together as well as connecting the inputs and outputs.
+ * Almost each part of the project is implemented in a separate module. The main module ( `robotic_arm` ) is the heart of the circuit which connects them together as well as connecting the inputs and outputs.
 
 
-## Implementation
+# Implementation
 
 ### How Servo motors work? 
 
@@ -116,7 +116,7 @@ The servo control module consists of two main parts : one for the manual process
 
 
 ### Simulation
-The modules were tested separately where each one of them has its own testbench. The following waveform screenshots for servo_control and seven_segment_display modules show the correctness of the circuit functionalities. And regarding other modules, it is preferable to simulate them locally since the range of the inputs is high.
+The modules were tested separately where each one of them has its own testbench. The following waveform screenshots for `servo_control` and `seven_segment_display` modules show the correctness of the circuit functionalities. And regarding other modules, it is preferable to simulate them locally since the range of the inputs is high.
 
 [Servo Control waveform](https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/blob/main/simulation%20screenshots/servo_control.png)
 
@@ -124,10 +124,11 @@ The modules were tested separately where each one of them has its own testbench.
 
 ### Block design
 
-https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/blob/screenshots/robotic_arm_block_design.pdf
+you can view the block design for the circuit [here](https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/blob/screenshots/robotic_arm_block_design.pdf)
 
 ### Robotic Arm Demo
-https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/blob/main/Robotic_arm_demo.mp4
+
+you can watch a demo video of the project [here](https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/blob/main/Robotic_arm_demo.mp4)
 
 
 
@@ -138,29 +139,32 @@ In this project, I encountered several unexpected issues and they are as follow:
 
 * ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Xilinx/887248200246A.
 
-    - I had to close the server a couple of times each time I wanted to program the board.
+    - _I had to close the server a couple of times each time I wanted to program the board._
 	
 
 * Missing part for the Gripper of the Arm Chassis
 
-    - As a workaround, I replaced it with a solid wire which was an inefficient solution.
+    - _As a workaround, I replaced it with a solid wire which was an inefficient solution._
 
 
 * The chassis is not good quality and unstable. Some parts were scratching, preventing the base servo motor from turning smoothly.
-    - I solved this issue by bending the chassis slightly to the back  
+
+    - _I solved this issue by bending the chassis slightly to the back_  
 
 
 * One of the joint servo wires was stretched while testing and therefore it lost signal connection. 
-    - Unfortunately, I couldn’t fix it and it has to be replaced with a new one.
+
+    - _Unfortunately, I couldn’t fix it and it has to be replaced with a new one._
 
 
 * While simulating the entire circuit all at once with one testbench, the outputs were not having correct values. 
-    - As a workaround, I wrote testbenches for all the modules separately and simulated them independently. 
+
+    - _As a workaround, I wrote testbenches for all the modules separately and simulated them independently._ 
 
 
 
 
-# Improvements:
+# Improvements
 
 There are some improvements and features that can be added to my project in the future. Some suggestions could be: 
 
@@ -176,7 +180,7 @@ There are some improvements and features that can be added to my project in the 
 
 
 
-# Conclusion:
+# Conclusion
 
 I have noticed how FPGAs are good solutions for robotics even though I didn't use all the features of the board since it provides a number of I/O resources which can be reprogrammed easily. In addition to that, it has low Latency time compared to other solutions which makes it faster for the signal to be sent to the output.
 
