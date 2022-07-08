@@ -128,7 +128,7 @@ you can view the block design for the circuit [here](https://mygit.th-deg.de/mh0
 
 ### Robotic Arm Demo
 
-you can watch a demo video of the project [here](https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/blob/main/Robotic_arm_demo.mp4)
+you can watch a demo video of the project ![here](https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga/-/raw/main/Robotic_arm_demo.mp4)
 
 
 
@@ -190,3 +190,9 @@ By doing the Robotic arm on the FPGA, I have learned a lot about circuit design 
 # Source code
 
 The source code can be found in my [repository](https://mygit.th-deg.de/mh02127/robotic-arm-on-fpga)
+
+
+*generate tcl file 
+*embedd video and simulation images in the report
+*update resources
+*update readme file for synthesis ( tcl )
